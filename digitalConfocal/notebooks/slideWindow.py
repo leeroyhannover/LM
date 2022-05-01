@@ -44,11 +44,13 @@ import numpy as np
 # load the image and define the window width and height
 # image = cv2.imread(args["image"])
 image = np.load('F:/LM/digitalConfocal/notebooks/testIMG.npy')
-(winW, winH) = (128, 128)
+image = np.stack((image,)*3, axis=-1)
+#(winW, winH) = (128, 128)
+(winW, winH) = (256, 128)
 
 
 # visualize the image
-for resized in pyramid(image, scale=1.5):
+for resized in pyramid(image, scale=2):
 	# loop over the sliding window for each layer of the pyramid
 	for (x, y, window) in sliding_window(resized, stepSize=32, windowSize=(winW, winH)):
 		# if the window does not meet our desired window size, ignore it
@@ -58,9 +60,11 @@ for resized in pyramid(image, scale=1.5):
 		# MACHINE LEARNING CLASSIFIER TO CLASSIFY THE CONTENTS OF THE
 		# WINDOW
 		# since we do not have a classifier, we'll just draw the window
-		clone = resized.copy()
-		cv2.rectangle(clone, (x, y), (x + winW, y + winH), (0, 255, 0), 2)
+		clone = resized.copy() 
+		cv2.rectangle(clone, (x, y), (x + winW, y + winH), (0, 255, 0), 2)  # third param indicates the colour
 		cv2.imshow("Window", clone)
 		cv2.waitKey(1)
+#		time.sleep(0.025)
 		time.sleep(0.025)
+        # cv2.destroyAllWindows()  # close all windows
         
