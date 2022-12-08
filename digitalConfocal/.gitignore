@@ -93,6 +93,11 @@ target/
 
 # all model
 *.h5
+*.hdf5
 
 # all training results
 *.png
+
+# all neptune
+./neptune
+
