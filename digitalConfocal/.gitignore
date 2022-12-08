@@ -104,3 +104,9 @@ target/
 # all tensorboard
 /notebooks/Unet/tensorboard/
 
+# all models weight
+models_weight/
+
+# all data
+data/
+
