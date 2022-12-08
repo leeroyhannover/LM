@@ -101,3 +101,6 @@ target/
 # all neptune
 .neptune/
 
+# all tensorboard
+/notebooks/Unet/tensorboard/
+
