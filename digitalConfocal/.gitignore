@@ -87,3 +87,12 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# all current data
+*.npy
+
+# all model
+*.h5
+
+# all training results
+*.png
