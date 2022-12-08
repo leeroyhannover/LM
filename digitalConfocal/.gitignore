@@ -87,3 +87,16 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# exclude all raw data
+*.npy
+
+# all model
+*.h5
+*.hdf5
+
+# all images
+*.png
+
+# all the training folder
+/e/LM/LM/digitalConfocal/notebooks/Unet/tensorBoard/

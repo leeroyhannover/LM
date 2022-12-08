@@ -39,7 +39,7 @@ def sliding_window(image, stepSize, windowSize):
             stdMap[y:y + windowSize[1], x:x + windowSize[0]] = tempStdPatch + stdMap[y:y + windowSize[1], x:x + windowSize[0]] 
             # print(tempStd)
      
-    np.save('stdMap.npy', stdMap)
+    np.save('./stdMap.npy', stdMap)
     # return stdMap
             
 import argparse
@@ -48,7 +48,7 @@ import cv2
 import numpy as np
 
 # read in the image
-image = np.load('F:/LM/digitalConfocal/notebooks/testIMG.npy')
+image = np.load('./testIMG.npy')
 
 image = np.stack((image,)*3, axis=-1)
 # (winW, winH) = (128, 128)
