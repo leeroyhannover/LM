@@ -99,4 +99,4 @@ target/
 *.png
 
 # all the training folder
-digitalConfocal/notebooks/Unet/tensorBoard/
+/e/LM/LM/digitalConfocal/notebooks/Unet/tensorBoard/
