@@ -110,3 +110,7 @@ models_weight/
 # all data
 data/
 
+# certain file
+models_weight/transfer2D_256_1000.hdf5
+models_weight/simple2D_1024_1000.hdf5
+
