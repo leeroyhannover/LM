@@ -99,5 +99,5 @@ target/
 *.png
 
 # all neptune
-./neptune
+.neptune/
 
